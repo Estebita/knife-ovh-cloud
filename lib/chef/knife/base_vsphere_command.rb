@@ -27,40 +27,40 @@ class Chef
           $default = Hash.new
         end
 
-        option :vsphere_user,
+        option :ovh_cloud_user,
                :short => "-u USERNAME",
                :long => "--vsuser USERNAME",
                :description => "The username for vsphere"
 
-        option :vsphere_pass,
+        option :ovh_cloud_pass,
                :short => "-p PASSWORD",
                :long => "--vspass PASSWORD",
                :description => "The password for vsphere"
 
-        option :vsphere_host,
+        option :ovh_cloud_host,
                :long => "--vshost HOST",
                :description => "The vsphere host"
 
-        option :vsphere_dc,
+        option :ovh_cloud_dc,
                :short => "-D DATACENTER",
                :long => "--vsdc DATACENTER",
                :description => "The Datacenter for vsphere"
 
-        option :vsphere_path,
+        option :ovh_cloud_path,
                :long => "--vspath SOAP_PATH",
                :description => "The vsphere SOAP endpoint path"
-        $default[:vsphere_path] = "/sdk"
+        $default[:ovh_cloud_path] = "/sdk"
 
-        option :vsphere_port,
+        option :ovh_cloud_port,
                :long => "--vsport PORT",
                :description => "The VI SDK port number to use"
-        $default[:vsphere_port] = 443
+        $default[:ovh_cloud_port] = 443
 
         option :vshere_nossl,
                :long => "--vsnossl",
                :description => "Disable SSL connectivity"
 
-        option :vsphere_insecure,
+        option :ovh_cloud_insecure,
                :long => "--vsinsecure",
                :description => "Disable SSL certificate verification"
 
@@ -90,13 +90,13 @@ class Chef
       def get_vim_connection
 
         conn_opts = {
-            :host => get_config(:vsphere_host),
-            :path => get_config(:vshere_path),
-            :port => get_config(:vsphere_port),
-            :use_ssl => !get_config(:vsphere_nossl),
-            :user => get_config(:vsphere_user),
-            :password => get_config(:vsphere_pass),
-            :insecure => get_config(:vsphere_insecure),
+            :host => get_config(:ovh_cloud_host),
+            :path => get_config(:ovh_cloud_path),
+            :port => get_config(:ovh_cloud_port),
+            :use_ssl => !get_config(:ovh_cloud_nossl),
+            :user => get_config(:ovh_cloud_user),
+            :password => get_config(:ovh_cloud_pass),
+            :insecure => get_config(:ovh_cloud_insecure),
             :proxyHost => get_config(:proxy_host),
             :proxyPort => get_config(:proxy_port)
         }
@@ -172,7 +172,7 @@ class Chef
       end
 
       def get_datacenter
-        dcname = get_config(:vsphere_dc)
+        dcname = get_config(:ovh_cloud_dc)
         traverse_folders_for_dc(config[:vim].rootFolder, dcname) or abort "datacenter not found"
       end
 
