@@ -52,14 +52,14 @@ Clone-specific customization options (for linux guests):
 
 For initial development, the plugin targets all communication at a vCenter instance rather than at specific hosts. Only named user authentication is currently supported; you can add the credentials to your <tt>knife.rb</tt> file:
 
-    knife[:vsphere_host] = "vcenter-hostname"
-    knife[:vsphere_user] = "privileged username"
-    knife[:vsphere_pass] = "your password"
-    knife[:vsphere_dc] = "your-datacenter"
+    knife[:ovh_cloud_host] = "vcenter-hostname"
+    knife[:ovh_cloud_user] = "privileged username"
+    knife[:ovh_cloud_pass] = "your password"
+    knife[:ovh_cloud_dc] = "your-datacenter"
 
 If you get the following error, you may need to disable SSL certificate checking:
 ERROR: OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed
-    knife[:vsphere_insecure] = true
+    knife[:ovh_cloud_insecure] = true
 
 Credentials can also be specified on the command line for multiple VSphere servers/data centers
 
@@ -67,34 +67,34 @@ Credentials can also be specified on the command line for multiple VSphere serve
 
 This plugin provides the following Knife subcommands.  Specific command options can be found by invoking the subcommand with a <tt>--help</tt> flag
 
-== knife vsphere vm list [-r, --recursive [--only-folders]]
+== knife ovh cloud vm list [-r, --recursive [--only-folders]]
 
 Enumerates the Virtual Machines registered in the target datacenter. Only name is currently displayed.
     -r, --recursive    - Recurse down through sub-folders to the specified folder
     --only-folders     - In combination with --recursive, print only folder names
 
-== knife vsphere vm state [-s STATE, --state STATE] [-w PORT, --wait-port PORT] [-g, --shutdown] [-r, --recursive]
+== knife ovh cloud vm state [-s STATE, --state STATE] [-w PORT, --wait-port PORT] [-g, --shutdown] [-r, --recursive]
 
 Manage power state of a virtual machine.
 	-s STATE, --state STATE    - The power state to transition the VM into; one of on|off|suspended
 	-w PORT, --wait-port PORT  - Wait for VM to be accessible on a port
 	-g, --shutdown             - Guest OS shutdown
     -r, --recursive            - Recurse down through sub-folders to the specified folder
-== knife vsphere pool list
+== knife ovh cloud pool list
 
 Enumerates the Resource Pools and Clusters registered in the target datacenter.
 
-== knife vsphere template list
+== knife ovh cloud template list
 
 Enumerates the VM Templates registered in the target datacenter. Only name is currently displayed.
 
-== knife vsphere customization list
+== knife ovh cloud customization list
 
 Enumerates the customization specifications registered in the target datacenter. Only name is currently displayed.
 
-== knife vsphere vm clone <new vm name> --template <source template name> --cspec <customization_spec>
+== knife ovh cloud vm clone <new vm name> --template <source template name> --cspec <customization_spec>
 
-    knife vsphere vm clone NewNode UbuntuTemplate --cspec StaticSpec \
+    knife ovh cloud vm clone NewNode UbuntuTemplate --cspec StaticSpec \
         --cips 192.168.0.99/24,192.168.1.99/24 \
         --chostname NODENAME --cdomain NODEDOMAIN
 
@@ -233,12 +233,12 @@ Customization Plugin Example:
     }
 
 
-== knife vsphere vm delete VMNAME [--purge]
+== knife ovh cloud vm delete VMNAME [--purge]
 
 Deletes an existing VM, removing it from vSphere inventory and deleting from disk, optionally deleting it from Chef as well.
     --purge           - Delete the client and node from Chef as well
 
-== knife vsphere vm snapshot VMNAME (options)
+== knife ovh cloud vm snapshot VMNAME (options)
     --list            - List the current tree of snapshots
     --create SNAPSHOT - Create a new snapshot off of the current snapshot
     --remove SNAPSHOT - Remove a named snapshot.
@@ -248,25 +248,25 @@ Deletes an existing VM, removing it from vSphere inventory and deleting from dis
 
 Manages the snapshots for an existing VM, allowing for creation, removal, and reverting of snapshots.
 
-== knife vsphere datastore list
+== knife ovh cloud datastore list
 
 Lists all known datastores with capacity and usage
 
-== knife vsphere datastore maxfree [--regex]
+== knife ovh cloud datastore maxfree [--regex]
 
 Gets the datastore with the most free space
     --regex           - Pattern to match the datastore name
 
-== knife vsphere datastorecluster list
+== knife ovh cloud datastorecluster list
 
 Lists all known datastorecluster with capacity and usage
 
-== knife vsphere datastorecluster maxfree [--regex]
+== knife ovh cloud datastorecluster maxfree [--regex]
 
 Gets the datastorecluster with the most free space
     --regex           - Pattern to match the datastore name
 
-== knife vsphere vm execute VMNAME COMMAND [ARGUMENTS] --exec-user USER --exec-passwd PASSWD [ --exec-dir DIRECTORY ]
+== knife ovh cloud vm execute VMNAME COMMAND [ARGUMENTS] --exec-user USER --exec-passwd PASSWD [ --exec-dir DIRECTORY ]
 
 Executes a program on the guest. Requires vCenter 5.0 or higher. 
 
@@ -281,7 +281,7 @@ Arguments are optional, and allow for redirection in Linux and Solaris.
   --exec-passwd PASSWD - The password for the user executing as.
   --exec-dir DIRECTORY - Optional: Working directory to execute in. Will default to $HOME of user.
 
-== knife vsphere vm vmdk add VMNAME SIZE
+== knife ovh cloud vm vmdk add VMNAME SIZE
 
 Adds VMDK to VM.
 
@@ -289,16 +289,16 @@ Optional arguments
 
   --vmdk-type TYPE - VMDK type, "thick" or "thin", defaults to "thin"
 
-== knife vsphere vm markastemplate VMNAME --folder FOLDER
+== knife ovh cloud vm markastemplate VMNAME --folder FOLDER
 
 Marks a VM as template.
 
-== knife vsphere hosts list --pool POOL
+== knife ovh cloud hosts list --pool POOL
 
 Lists all hosts in given Pool
 
 
-== knife vsphere vm migrate VMNAME (options)
+== knife ovh cloud vm migrate VMNAME (options)
 
 Migrate VM to resource pool/datastore/host.
 Resource pool and datastore are mandatory.
@@ -311,7 +311,7 @@ Resource pool and datastore are mandatory.
 
 
 
-== knife vsphere vm net STATE VMNAME
+== knife ovh cloud vm net STATE VMNAME
 
 Set networking state for VMNAME by connecting/disconnecting network interfaces.
 Posible states are up/down.
