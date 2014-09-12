@@ -1,4 +1,6 @@
-= Knife vSphere
+= Knife vSphere for OVH Private Cloud. 
+
+== NOT READY - Work in progress 
 
 = DESCRIPTION:
 
