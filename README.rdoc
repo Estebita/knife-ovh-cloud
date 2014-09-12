@@ -1,12 +1,18 @@
-= Knife vSphere for OVH Private Cloud. 
-
-== NOT READY - Work in progress 
+= Knife vSphere for OVH Private Cloud PCC. 
 
 = DESCRIPTION:
 
-This is an Opscode Knife plugin to interact with VMware's vSphere. This plugin currently supports the following:
+Un Plugin Opscode Knife permettant une communication avec l'API Vmware Vsphere.
 
-Listings:
+C'est juste un fork du projet et j'ai renommé les verbes. Si les users OVH ont une idée sur des potentiels features ils peuvent fork et pourquoi pas faire une pull-request, je ferais le merge. L'intérêt et d'avoir un repo pour les users OVH et si on veut bricoler ou le faire évoluer a notre sauce on peut.
+
+Rbvmomi, le layer ruby gerant la partie SOAP est compatible vSphere 5.0 API. 
+
+[Documentation officiel api vmware](https://www.vmware.com/support/developer/vc-sdk/visdk41pubs/ApiReference/index.html)
+
+this is an Opscode Knife plugin to interact with VMware's vSphere API. This plugin currently supports the following:
+
+Lister / Listings:
 
 - VMs
 - Folders
@@ -16,6 +22,7 @@ Listings:
 - Resource Pools and Clusters
 - Customization Specifications
 - Hosts in a Pool or Cluster
+
 VM Operations:
 
 - Power on/off
@@ -39,7 +46,7 @@ Clone-specific customization options (for linux guests):
 
 = INSTALLATION:
 
-    gem install knife-vsphere
+    gem install knife-ovh-cloud
 
 = CONFIGURATION:
 
@@ -321,6 +328,7 @@ Authors:: Ezra Pagel <ezra@cpan.org>
           Adrian Stanila <adrian.stanila@sacx.net>
           Raducu Deaconu <rhadoo_io@yahoo.com>
           Leeor Aharon
+          Alexis Gruet <alexis@kroknet.com>
 
 Copyright:: Copyright (c) 2011-2013 Ezra Pagel
 
