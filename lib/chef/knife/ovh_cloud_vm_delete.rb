@@ -12,7 +12,7 @@ require 'chef/node'
 require 'chef/api_client'
 
 # Delete a virtual machine from vCenter
-class Chef::Knife::VsphereVmDelete < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudVmDelete < Chef::Knife::BaseOvhCloudCommand
 
   banner "knife ovh cloud vm delete VMNAME"
 

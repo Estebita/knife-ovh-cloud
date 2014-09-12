@@ -3,7 +3,7 @@ require 'chef/knife/base_ovh_cloud_command'
 require 'rbvmomi'
 require 'netaddr'
 #list hosts belonging to pool
-class Chef::Knife::VsphereHostsList < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudHostsList < Chef::Knife::BaseOvhCloudCommand
   banner "knife ovh cloud hosts list"
 
   get_common_options

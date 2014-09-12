@@ -13,7 +13,7 @@ require 'rbvmomi'
 # Clone an existing template into a new VM, optionally applying a customization specification.
 # usage:
 # knife vsphere vm markastemplate MyVM --folder /templates
-class Chef::Knife::VsphereVmMarkastemplate < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudVmMarkastemplate < Chef::Knife::BaseOvhCloudCommand
 
   banner "knife ovh cloud vm markastemplate VMNAME"
 

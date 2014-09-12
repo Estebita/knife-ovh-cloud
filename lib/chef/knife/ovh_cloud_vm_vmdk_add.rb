@@ -6,7 +6,7 @@ require 'chef/knife'
 require 'chef/knife/base_ovh_cloud_command'
 
 # Lists all known virtual machines in the configured datacenter
-class Chef::Knife::VsphereVmVmdkAdd < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudVmVmdkAdd < Chef::Knife::BaseOvhCloudCommand
 
   banner "knife ovh cloud vm vmdk add"
 

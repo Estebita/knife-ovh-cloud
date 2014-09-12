@@ -6,7 +6,7 @@ require 'chef/knife'
 require 'chef/knife/base_ovh_cloud_command'
 
 # Lists all known pools in the configured datacenter
-class Chef::Knife::VspherePoolList < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudPoolList < Chef::Knife::BaseOvhCloudCommand
 
   banner "knife ovh cloud pool list"
 

@@ -6,7 +6,7 @@ require 'chef/knife'
 require 'chef/knife/base_ovh_cloud_command'
 
 # Lists all customization specifications in the configured datacenter
-class Chef::Knife::VsphereCustomizationList < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudCustomizationList < Chef::Knife::BaseOvhCloudCommand
 
   banner "knife ovh cloud customization list"
 

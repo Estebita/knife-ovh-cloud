@@ -16,7 +16,7 @@ require 'netaddr'
 # knife vsphere vm clone NewNode UbuntuTemplate --cspec StaticSpec \
 #     --cips 192.168.0.99/24,192.168.1.99/24 \
 #     --chostname NODENAME --cdomain NODEDOMAIN
-class Chef::Knife::VsphereVmClone < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudVmClone < Chef::Knife::BaseOvhCloudCommand
 
   banner "knife ovh cloud vm clone VMNAME (options)"
 
@@ -57,7 +57,7 @@ class Chef::Knife::VsphereVmClone < Chef::Knife::BaseVsphereCommand
 
   option :customization_plugin,
          :long => "--cplugin CUST_PLUGIN_PATH",
-         :description => "Path to plugin that implements KnifeVspherePlugin.customize_clone_spec and/or KnifeVspherePlugin.reconfig_vm"
+         :description => "Path to plugin that implements KnifeOvhCloudPlugin.customize_clone_spec and/or KnifeOvhCloudPlugin.reconfig_vm"
 
   option :customization_plugin_data,
          :long => "--cplugin-data CUST_PLUGIN_DATA",
@@ -458,8 +458,8 @@ class Chef::Knife::VsphereVmClone < Chef::Knife::BaseVsphereCommand
           abort "Customization plugin could not be found at #{cplugin_path}"
         end
 
-        if Object.const_defined? 'KnifeVspherePlugin'
-          @customization_plugin = Object.const_get('KnifeVspherePlugin').new
+        if Object.const_defined? 'OvhCloudPlugin'
+          @customization_plugin = Object.const_get('OvhCloudPlugin').new
           if cplugin_data = get_config(:customization_plugin_data)
             if @customization_plugin.respond_to?(:data=)
               @customization_plugin.data = cplugin_data
@@ -468,7 +468,7 @@ class Chef::Knife::VsphereVmClone < Chef::Knife::BaseVsphereCommand
             end
           end
         else
-          abort "KnifeVspherePlugin class is not defined in #{cplugin_path}"
+          abort "OvhCloudPlugin class is not defined in #{cplugin_path}"
         end
       end
     end

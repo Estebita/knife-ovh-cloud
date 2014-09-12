@@ -19,7 +19,7 @@ PowerStates = {
 }
 
 # Manage power state of a virtual machine
-class Chef::Knife::VsphereVmState < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudVmState < Chef::Knife::BaseOvhCloudCommand
 
   banner "knife ovh cloud vm state VMNAME (options)"
 

@@ -19,7 +19,7 @@ require 'chef/knife'
 require 'chef/knife/base_ovh_cloud_command'
 
 # Gets the data store with the most free space in datacenter
-class Chef::Knife::VsphereDatastoreMaxfree < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudDatastoreMaxfree < Chef::Knife::BaseOvhCloudCommand
 
   banner "knife ovh cloud datastore maxfree"
 

@@ -10,7 +10,7 @@ require 'rbvmomi'
 # Base class for vsphere knife commands
 class Chef
   class Knife
-    class BaseVsphereCommand < Knife
+    class BaseOvhCloudCommand < Knife
 
       deps do
         require 'chef/knife/bootstrap'

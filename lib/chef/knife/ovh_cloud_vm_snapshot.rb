@@ -9,7 +9,7 @@ require 'netaddr'
 
 
 # Manage snapshots of a virtual machine
-class Chef::Knife::VsphereVmSnapshot < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudVmSnapshot < Chef::Knife::BaseOvhCloudCommand
 
   banner "knife ovh cloud vm snapshot VMNAME (options)"
 

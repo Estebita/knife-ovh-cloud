@@ -7,7 +7,7 @@ require 'chef/knife'
 require 'chef/knife/base_ovh_cloud_command'
 
 # Lists all known VM templates in the configured datacenter
-class Chef::Knife::VsphereTemplateList < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudTemplateList < Chef::Knife::BaseOvhCloudCommand
 
   banner "knife ovh cloud template list"
 

@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "knife-ovh-cloud"
-  s.version = "1.0.0-pre.1"
+  s.version = "1.0.0.pre.1"
   s.summary = "OVH Cloud infrastructure Support for Knife"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=

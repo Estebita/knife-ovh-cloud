@@ -3,7 +3,7 @@ require 'chef/knife/base_ovh_cloud_command'
 require 'rbvmomi'
 require 'netaddr'
 
-class Chef::Knife::VspherePoolQuery < Chef::Knife::BaseVsphereCommand
+class Chef::Knife::OvhCloudPoolQuery < Chef::Knife::BaseOvhCloudCommand
   banner "knife ovh cloud pool query POOLNAME QUERY.  See \"http://pubs.vmware.com/vi3/sdk/ReferenceGuide/vim.ComputeResource.html\" for allowed QUERY values."
 
   get_common_options
