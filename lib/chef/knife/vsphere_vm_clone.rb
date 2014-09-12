@@ -18,7 +18,7 @@ require 'netaddr'
 #     --chostname NODENAME --cdomain NODEDOMAIN
 class Chef::Knife::VsphereVmClone < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere vm clone VMNAME (options)"
+  banner "knife ovh cloud vm clone VMNAME (options)"
 
   get_common_options
 

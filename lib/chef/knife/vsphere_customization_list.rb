@@ -8,7 +8,7 @@ require 'chef/knife/base_vsphere_command'
 # Lists all customization specifications in the configured datacenter
 class Chef::Knife::VsphereCustomizationList < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere customization list"
+  banner "knife ovh cloud customization list"
 
   get_common_options
 

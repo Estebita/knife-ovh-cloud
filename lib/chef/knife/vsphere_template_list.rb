@@ -9,7 +9,7 @@ require 'chef/knife/base_vsphere_command'
 # Lists all known VM templates in the configured datacenter
 class Chef::Knife::VsphereTemplateList < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere template list"
+  banner "knife ovh cloud template list"
 
   get_common_options
 

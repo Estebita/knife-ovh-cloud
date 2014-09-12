@@ -21,7 +21,7 @@ PowerStates = {
 # Manage power state of a virtual machine
 class Chef::Knife::VsphereVmState < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere vm state VMNAME (options)"
+  banner "knife ovh cloud vm state VMNAME (options)"
 
   get_common_options
 

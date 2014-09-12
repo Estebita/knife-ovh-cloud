@@ -21,7 +21,7 @@ require 'chef/knife/base_vsphere_command'
 # Gets the data store with the most free space in datacenter
 class Chef::Knife::VsphereDatastoreMaxfree < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere datastore maxfree"
+  banner "knife ovh cloud datastore maxfree"
 
   option :regex,
          :short => "-r REGEX",

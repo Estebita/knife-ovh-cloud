@@ -14,7 +14,7 @@ require 'chef/api_client'
 # Delete a virtual machine from vCenter
 class Chef::Knife::VsphereVmDelete < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere vm delete VMNAME"
+  banner "knife ovh cloud vm delete VMNAME"
 
   option :purge,
          :short => "-P",

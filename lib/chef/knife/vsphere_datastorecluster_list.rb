@@ -39,7 +39,7 @@ end
 # Lists all known data store cluster in datacenter with sizes
 class Chef::Knife::VsphereDatastoreclusterList < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere datastorecluster list"
+  banner "knife ovh cloud datastorecluster list"
 
   get_common_options
 

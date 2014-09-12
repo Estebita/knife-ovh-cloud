@@ -6,7 +6,7 @@ require 'chef/knife'
 require 'chef/knife/base_vsphere_command'
 # Switch VM networking state up/down (on all network interfaces)
 class Chef::Knife::VsphereVmNet < Chef::Knife::BaseVsphereCommand
-  banner "knife vsphere vm net STATE VMNAME"
+  banner "knife ovh cloud vm net STATE VMNAME"
   get_common_options
   def run
     $stdout.sync = true

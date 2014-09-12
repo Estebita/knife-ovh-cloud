@@ -11,7 +11,7 @@ require 'netaddr'
 # Manage snapshots of a virtual machine
 class Chef::Knife::VsphereVmSnapshot < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere vm snapshot VMNAME (options)"
+  banner "knife ovh cloud vm snapshot VMNAME (options)"
 
   get_common_options
 

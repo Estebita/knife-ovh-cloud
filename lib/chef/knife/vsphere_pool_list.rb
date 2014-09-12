@@ -8,7 +8,7 @@ require 'chef/knife/base_vsphere_command'
 # Lists all known pools in the configured datacenter
 class Chef::Knife::VspherePoolList < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere pool list"
+  banner "knife ovh cloud pool list"
 
   get_common_options
 

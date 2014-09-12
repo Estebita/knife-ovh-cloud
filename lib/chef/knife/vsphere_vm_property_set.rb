@@ -7,7 +7,7 @@ require 'rbvmomi'
 require 'netaddr'
 
 class Chef::Knife::VsphereVmPropertySet < Chef::Knife::BaseVsphereCommand
-  banner "knife vsphere vm property set VMNAME PROPERTY VALUE.  Sets a vApp Property on VMNAME."
+  banner "knife ovh cloud vm property set VMNAME PROPERTY VALUE.  Sets a vApp Property on VMNAME."
 
   get_common_options
 

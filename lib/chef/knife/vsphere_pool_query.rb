@@ -4,7 +4,7 @@ require 'rbvmomi'
 require 'netaddr'
 
 class Chef::Knife::VspherePoolQuery < Chef::Knife::BaseVsphereCommand
-  banner "knife vsphere pool query POOLNAME QUERY.  See \"http://pubs.vmware.com/vi3/sdk/ReferenceGuide/vim.ComputeResource.html\" for allowed QUERY values."
+  banner "knife ovh cloud pool query POOLNAME QUERY.  See \"http://pubs.vmware.com/vi3/sdk/ReferenceGuide/vim.ComputeResource.html\" for allowed QUERY values."
 
   get_common_options
 

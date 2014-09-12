@@ -15,7 +15,7 @@ require 'rbvmomi'
 # knife vsphere vm markastemplate MyVM --folder /templates
 class Chef::Knife::VsphereVmMarkastemplate < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere vm markastemplate VMNAME"
+  banner "knife ovh cloud vm markastemplate VMNAME"
 
   get_common_options
 

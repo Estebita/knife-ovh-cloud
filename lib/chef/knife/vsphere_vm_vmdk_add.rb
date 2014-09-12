@@ -8,7 +8,7 @@ require 'chef/knife/base_vsphere_command'
 # Lists all known virtual machines in the configured datacenter
 class Chef::Knife::VsphereVmVmdkAdd < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere vm vmdk add"
+  banner "knife ovh cloud vm vmdk add"
 
   get_common_options
 

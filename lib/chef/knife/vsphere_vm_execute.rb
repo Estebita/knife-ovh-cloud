@@ -7,7 +7,7 @@ require 'rbvmomi'
 require 'netaddr'
 
 class Chef::Knife::VsphereVmExecute < Chef::Knife::BaseVsphereCommand
-  banner "knife vsphere vm execute VMNAME COMMAND ARGS"
+  banner "knife ovh cloud vm execute VMNAME COMMAND ARGS"
 
   option :exec_user,
          :long => "--exec-user USER",

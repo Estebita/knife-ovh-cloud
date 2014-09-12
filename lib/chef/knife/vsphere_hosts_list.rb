@@ -4,7 +4,7 @@ require 'rbvmomi'
 require 'netaddr'
 #list hosts belonging to pool
 class Chef::Knife::VsphereHostsList < Chef::Knife::BaseVsphereCommand
-  banner "knife vsphere hosts list"
+  banner "knife ovh cloud hosts list"
 
   get_common_options
   option :pool,

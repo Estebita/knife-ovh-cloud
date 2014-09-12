@@ -7,7 +7,7 @@ require 'rbvmomi'
 require 'netaddr'
 
 class Chef::Knife::VsphereVmConfig < Chef::Knife::BaseVsphereCommand
-  banner "knife vsphere vm config VMNAME PROPERTY VALUE.  See \"http://pubs.vmware.com/vi3/sdk/ReferenceGuide/vim.vm.ConfigSpec.html\" for allowed ATTRIBUTE values (any property of type xs:string is supported)."
+  banner "knife ovh cloud vm config VMNAME PROPERTY VALUE.  See \"http://pubs.vmware.com/vi3/sdk/ReferenceGuide/vim.vm.ConfigSpec.html\" for allowed ATTRIBUTE values (any property of type xs:string is supported)."
 
   get_common_options
 

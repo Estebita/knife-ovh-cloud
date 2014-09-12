@@ -8,7 +8,7 @@ require 'chef/knife/base_vsphere_command'
 # Lists all known virtual machines in the configured datacenter
 class Chef::Knife::VsphereVmMove < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere vm move"
+  banner "knife ovh cloud vm move"
 
   get_common_options
 

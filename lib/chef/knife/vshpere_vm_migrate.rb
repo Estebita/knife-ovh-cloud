@@ -8,7 +8,7 @@ require 'chef/knife/base_vsphere_command'
 # migrate vm to specified resource pool , datastore and host
 class Chef::Knife::VsphereVmMigrate < Chef::Knife::BaseVsphereCommand
 #migrate --resource-pool --dest-host --dest-datastore
-  banner "knife vsphere vm migrate (options)"
+  banner "knife ovh cloud vm migrate (options)"
 
   get_common_options
 

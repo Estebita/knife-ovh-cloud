@@ -20,7 +20,7 @@ require 'chef/knife/base_vsphere_command'
 # Lists all known data stores in datacenter with sizes
 class Chef::Knife::VsphereVlanList < Chef::Knife::BaseVsphereCommand
 
-  banner "knife vsphere vlan list"
+  banner "knife ovh cloud vlan list"
 
   get_common_options
 
