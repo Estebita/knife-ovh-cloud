@@ -15,7 +15,7 @@
 # PERFORMANCE OF THIS SOFTWARE
 
 require 'chef/knife'
-require 'chef/knife/base_vsphere_command'
+require 'chef/knife/base_ovh_cloud_command'
 
 # Lists all known data stores in datacenter with sizes
 class Chef::Knife::VsphereVlanList < Chef::Knife::BaseVsphereCommand

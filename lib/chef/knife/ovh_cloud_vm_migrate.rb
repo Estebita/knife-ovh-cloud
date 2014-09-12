@@ -3,7 +3,7 @@
 # License:: Apache License, Version 2.0
 #
 require 'chef/knife'
-require 'chef/knife/base_vsphere_command'
+require 'chef/knife/base_ovh_cloud_command'
 
 # migrate vm to specified resource pool , datastore and host
 class Chef::Knife::VsphereVmMigrate < Chef::Knife::BaseVsphereCommand

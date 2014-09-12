@@ -3,7 +3,7 @@
 # License:: Apache License, Version 2.0
 #
 require 'chef/knife'
-require 'chef/knife/base_vsphere_command'
+require 'chef/knife/base_ovh_cloud_command'
 
 # Lists all customization specifications in the configured datacenter
 class Chef::Knife::VsphereCustomizationList < Chef::Knife::BaseVsphereCommand

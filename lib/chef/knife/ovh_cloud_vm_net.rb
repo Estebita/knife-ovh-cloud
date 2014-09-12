@@ -3,7 +3,7 @@
 # License:: Apache License, Version 2.0
 #
 require 'chef/knife'
-require 'chef/knife/base_vsphere_command'
+require 'chef/knife/base_ovh_cloud_command'
 # Switch VM networking state up/down (on all network interfaces)
 class Chef::Knife::VsphereVmNet < Chef::Knife::BaseVsphereCommand
   banner "knife ovh cloud vm net STATE VMNAME"

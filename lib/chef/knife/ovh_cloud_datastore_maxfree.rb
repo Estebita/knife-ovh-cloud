@@ -16,7 +16,7 @@
 # PERFORMANCE OF THIS SOFTWARE
 
 require 'chef/knife'
-require 'chef/knife/base_vsphere_command'
+require 'chef/knife/base_ovh_cloud_command'
 
 # Gets the data store with the most free space in datacenter
 class Chef::Knife::VsphereDatastoreMaxfree < Chef::Knife::BaseVsphereCommand

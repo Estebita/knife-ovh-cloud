@@ -4,7 +4,7 @@
 #
 
 require 'chef/knife'
-require 'chef/knife/base_vsphere_command'
+require 'chef/knife/base_ovh_cloud_command'
 require 'rbvmomi'
 require 'netaddr'
 

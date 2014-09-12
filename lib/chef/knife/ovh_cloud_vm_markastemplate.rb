@@ -7,7 +7,7 @@
 #
 
 require 'chef/knife'
-require 'chef/knife/base_vsphere_command'
+require 'chef/knife/base_ovh_cloud_command'
 require 'rbvmomi'
 
 # Clone an existing template into a new VM, optionally applying a customization specification.
