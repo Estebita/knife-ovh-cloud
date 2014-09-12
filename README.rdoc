@@ -8,7 +8,7 @@ C'est juste un fork du projet et j'ai renommé les verbes. Si les users OVH ont 
 
 Rbvmomi, le layer ruby gerant la partie SOAP est compatible vSphere 5.0 API. 
 
-<a href="https://www.vmware.com/support/developer/vc-sdk/visdk41pubs/ApiReference/index.html">Documentation officiel vmware</a>
+https://www.vmware.com/support/developer/vc-sdk/visdk41pubs/ApiReference/index.html
 
 this is an Opscode Knife plugin to interact with VMware's vSphere API. This plugin currently supports the following:
 
