@@ -7,7 +7,7 @@ require 'rbvmomi'
 require 'netaddr'
 
 class Chef::Knife::OvhCloudVmQuery < Chef::Knife::BaseOvhCloudCommand
-  banner "knife ovh cloud query VMNAME QUERY.  See \"http://pubs.vmware.com/vi3/sdk/ReferenceGuide/vim.VirtualMachine.html\" for allowed QUERY values."
+  banner "knife ovh cloud vm query VMNAME QUERY.  See \"http://pubs.vmware.com/vi3/sdk/ReferenceGuide/vim.VirtualMachine.html\" for allowed QUERY values."
 
   get_common_options
 
